@@ -1,7 +1,7 @@
 # AMD XDNAアーキテクチャ概要
 
 作成日時: 2026-03-28 15:31:57
-更新日時: 2026-03-30 03:05:00
+更新日時: 2026-03-30 14:46:33
 
 文責: 濱田 剛(Tsuyoshi Hamada)
 Contact email: hamada@degima.ai
@@ -33,6 +33,10 @@ Xilinxは1984年創業のFPGAの発明者です。
 | 1984 | Xilinx創業。世界初のファブレス半導体企業、FPGAを発明 |
 | 1994 | Virtex FPGA発表 |
 | 2012 | Zynq SoC発表（ARM + FPGA統合） |
+| ~2014 | Xilinx、7nm Versal ACAP（コードネーム**Project Everest**）の開発を開始。10億ドル超・1,500名以上のエンジニアを投入 |
+| 2016年3月 | 清華大学発のAIスタートアップ**DeePhi Technology（深鑑科技）**が設立 |
+| 2018年7月 | XilinxがDeePhi Technologyを買収。DPU（Deep Processing Unit）IPとニューラルネットワーク圧縮技術を獲得 |
+| 2018年 | Versal 7nmチップのテープアウト（37億トランジスタ） |
 | 2019 | Versal ACAP発表（プロセッサコア + プログラマブルロジック + **AI Engine**） |
 | 2020年10月 | AMDがXilinx買収を発表 |
 | 2022年2月 | AMD、Xilinx買収完了（約350億ドル、全株式交換） |
@@ -43,6 +47,24 @@ Xilinxは1984年創業のFPGAの発明者です。
 Xilinxが2019年に発表したVersal ACAPには「AI Engine（AIE）」と呼ばれるタイル型の演算アレイが搭載されていました。このAIEは、FPGAロジックに隣接する空間データフローエンジンとして、5G通信やレーダー信号処理向けに設計されたものです。
 
 AMD XDNAは、このAIEをクライアントAPU向けに再設計・最適化した技術です。データセンター向けのVersal AIEと共通の設計思想（タイル配列、VLIW+SIMD、DMAベースのデータ移動）を持ちながら、低消費電力のノートPC・エッジデバイス向けにチューニングされています。
+
+### 補足：DeePhi Technology（深鑑科技）との関係
+
+XDNAの技術的ルーツを辿るうえで、XilinxによるDeePhi Technology（深鑑科技）の買収も重要なトピックです。両者には深い関わりがありますが、技術的な系譜としては区別して理解するとよりクリアになります。
+
+**DeePhi Technology**は2016年に清華大学の卒業生（姚頌、汪玉、韓松、単羿）によって設立されたAIチップスタートアップで、FPGA上でニューラルネットワーク推論を効率化するDPU（Deep Processing Unit）ソフトIPと、ニューラルネットワークの枝刈り・圧縮技術（Deep Compression）を開発していました。Xilinxは2017年からDeephiに出資し、2018年7月に買収しています。
+
+しかし、XDNAの直接の祖先であるVersal AI Engineは、Xilinx社内でIvo Bolsens（CTO）率いるチームが設計したものです。Versalの開発プロジェクト（Project Everest）は**2014年頃に開始**されており、DeePhi設立（2016年）の約2年前です。10億ドル超の投資と1,500名以上のエンジニアが投入された大規模プロジェクトでした（[VentureBeat, 2018](https://venturebeat.com/business/xilinx-spent-1-billion-over-4-years-to-make-adaptable-computing-chip/)）。
+
+両者の技術的な関係は以下のとおりです。
+
+| | Versal AI Engine → XDNA | DeePhi DPU → Vitis AI |
+|:--|:--|:--|
+| 技術レベル | シリコン（ハードウェア） | ソフトIP / オーバーレイ |
+| 本質 | 硬化されたVLIWベクトルプロセッサタイルの2Dアレイ | FPGA / AI Engineリソース上で動作するDNN推論IPコア |
+| 関係 | DPUが動作する**基盤** | AI Engineの**上で**動作するソフトウェア層 |
+
+DeePhi技術は買収後、Xilinx（現AMD）の**Vitis AIフレームワーク**に統合され、DPU IPやモデル最適化ツール（枝刈り・量子化）としてAI Engineハードウェアの上で活用されています。XDNAのハードウェアアーキテクチャとDeePhi由来のソフトウェア技術は、それぞれ独立した起源を持ちながら「基盤と応用」として組み合わさることで、現在のAMD AIプラットフォームを形づくっています。
 
 ## XDNAアーキテクチャの基本構造
 
