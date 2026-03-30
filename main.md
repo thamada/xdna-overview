@@ -276,6 +276,24 @@ Ryzen 5 8540U と Ryzen 3 8440U は 137mm² の Phoenix 2 ダイ（Zen 4 + Zen 4
 
 PRO版: Ryzen 7 PRO 8840U、Ryzen 5 PRO 8640U、Ryzen 5 PRO 8540U、Ryzen 3 PRO 8440U（法人向け）。
 
+#### 初代 XDNA（リブランド）— Ryzen 200シリーズ（Hawk Point, 2025年）
+
+対応メモリ: DDR5-5600 / LPDDR5X-7500。プロセスノード: TSMC 4nm。CPU: Zen 4、GPU: RDNA 3。ソケット: FP7 / FP7r2 / FP8。Ryzen 8040シリーズと同一の Hawk Point シリコンだが、命名体系を簡素化（4桁型番＋サフィックス → 3桁型番）。NPU搭載モデルは引き続き16 TOPS。178mm² Phoenix ダイ搭載モデルのみ XDNA NPU を内蔵。
+
+| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | cTDP | 市販PC例 |
+|:--|:--|:--|:--|:--|:--|:--|
+| Ryzen 9 270 | 8C/16T | 5.2 GHz | Radeon 780M (12CU) | 16 | 35–54W | — |
+| Ryzen 7 260 | 8C/16T | 5.1 GHz | Radeon 780M (12CU) | 16 | 35–54W | — |
+| Ryzen 7 250 | 8C/16T | 5.1 GHz | Radeon 780M (12CU) | 16 | 15–30W | — |
+| Ryzen 5 240 | 6C/12T | 5.0 GHz | Radeon 760M (8CU) | 16 | 35–54W | — |
+| Ryzen 5 230 | 6C/12T | 4.9 GHz | Radeon 760M (8CU) | 16 | 15–30W | — |
+| Ryzen 5 220 | 6C/12T | 4.9 GHz | Radeon 740M (4CU) | **なし** | 15–30W | — |
+| Ryzen 3 210 | 4C/8T | 4.7 GHz | Radeon 740M (4CU) | **なし** | 15–30W | — |
+
+Ryzen 5 220 と Ryzen 3 210 は 137mm² の Phoenix 2 ダイ（Zen 4 + Zen 4c 構成）を使用しており、XDNA NPU を**搭載していない**（GD-220e で明示的に対象外）。
+
+PRO版: Ryzen PRO 200シリーズ（法人向け）。Ryzen 5 220 / Ryzen 3 210 を除き Ryzen AI 対応。
+
 #### XDNA 2 — Ryzen AI 300シリーズ（Strix Point / Krackan Point, 2024–2025年）
 
 対応メモリ: DDR5-5600 / LPDDR5X-8000。プロセスノード: TSMC 4nm。CPU: Zen 5 + Zen 5c（ハイブリッド）、GPU: RDNA 3.5。ソケット: FP8。Copilot+ PC対応（40 TOPS以上）。
