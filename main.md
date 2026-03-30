@@ -296,15 +296,17 @@ PRO版: Ryzen AI 7 PRO 350、Ryzen AI 5 PRO 340（法人向け）。
 
 #### XDNA 2 — Ryzen AI Maxシリーズ（2025年）
 
-対応メモリ: LPDDR5X（最大128GB、うち最大96GBをVRAMに転用可能な統合メモリ構成）。大容量メモリにより、100B超パラメータのLLMもローカル実行が可能。
+対応メモリ: 256-bit LPDDR5X-8000（最大128GB、うち最大96GBをVRAMに転用可能な統合メモリ構成）。プロセスノード: TSMC 4nm。CPU: Zen 5（全コア、ハイブリッドなし）、GPU: RDNA 3.5。ソケット: FP11。コードネーム: Strix Halo。大容量メモリにより、100B超パラメータのLLMもローカル実行が可能。
 
-| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | TDP | 市販PC例 |
+| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | cTDP | 市販PC例 |
 |:--|:--|:--|:--|:--|:--|:--|
 | Ryzen AI Max+ 395 | 16C/32T | 5.1 GHz | Radeon 8060S (40CU) | 50 | 45–120W | — |
 | Ryzen AI Max+ 392 | 12C/24T | 5.0 GHz | Radeon 8060S (40CU) | 50 | 45–120W | — |
 | Ryzen AI Max+ 388 | 8C/16T | 5.0 GHz | Radeon 8060S (40CU) | 50 | 45–120W | — |
 | Ryzen AI Max 390 | 12C/24T | 5.0 GHz | Radeon 8050S (32CU) | 50 | 45–120W | ASUS ROG Flow Z13 (2025) |
 | Ryzen AI Max 385 | 8C/16T | 5.0 GHz | Radeon 8050S (32CU) | 50 | 45–120W | — |
+
+PRO版: Ryzen AI Max+ PRO 395、Max PRO 390、Max PRO 385、Max PRO 380（法人・モバイルワークステーション向け）。PRO 380 はPRO専用で、Radeon 8040S（16CU）/ 最大64GBメモリの縮小構成。
 
 #### XDNA 2 — Ryzen AI 400シリーズ（ラップトップ, 2026年）
 
