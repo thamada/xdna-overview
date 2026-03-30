@@ -1,7 +1,7 @@
 # AMD XDNAアーキテクチャ概要
 
 作成日時: 2026-03-28 15:31:57
-更新日時: 2026-03-31 12:00:00
+更新日時: 2026-03-31 01:49:53
 
 文責: 濱田 剛(Tsuyoshi Hamada)
 Contact email: hamada@degima.ai
