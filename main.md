@@ -274,25 +274,25 @@ Ryzen 5 8540U と Ryzen 3 8440U はXDNA NPUを**搭載していません**。PRO
 
 #### XDNA 2 — Ryzen AI 300シリーズ（Strix Point / Krackan Point, 2024–2025年）
 
-対応メモリ: DDR5-5600 / LPDDR5X-7500。プロセスノード: TSMC 4nm。CPU: Zen 5 + Zen 5c（ハイブリッド）、GPU: RDNA 3.5。Copilot+ PC対応（40 TOPS以上）。
+対応メモリ: DDR5-5600 / LPDDR5X-8000。プロセスノード: TSMC 4nm。CPU: Zen 5 + Zen 5c（ハイブリッド）、GPU: RDNA 3.5。ソケット: FP8。Copilot+ PC対応（40 TOPS以上）。
 
 **Strix Point（上位）**:
 
-| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | TDP | 市販PC例 |
+| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | cTDP | 市販PC例 |
 |:--|:--|:--|:--|:--|:--|:--|
 | Ryzen AI 9 HX 375 | 12C/24T | 5.1 GHz | Radeon 890M (16CU) | 55 | 15–54W | — |
 | Ryzen AI 9 HX 370 | 12C/24T | 5.1 GHz | Radeon 890M (16CU) | 50 | 15–54W | ASUS ROG Zephyrus G16 (2024) |
 | Ryzen AI 9 365 | 10C/20T | 5.0 GHz | Radeon 880M (12CU) | 50 | 15–54W | ASUS Zenbook S 16 (UM5606) |
-| Ryzen AI 7 PRO 360 | 8C/16T | 5.0 GHz | Radeon 880M (12CU) | 50 | 15–54W | — |
 
 **Krackan Point（普及帯）**:
 
-| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | TDP | 市販PC例 |
+| SKU | コア/スレッド | ブースト | iGPU | NPU (TOPS) | cTDP | 市販PC例 |
 |:--|:--|:--|:--|:--|:--|:--|
 | Ryzen AI 7 350 | 8C/16T | 5.0 GHz | Radeon 860M (8CU) | 50 | 15–54W | ASUS Zenbook S 16 (UM5606KA)、Dell 16 Plus |
 | Ryzen AI 5 340 | 6C/12T | 4.8 GHz | Radeon 840M (4CU) | 50 | 15–54W | Dell 14 Plus、Lenovo IdeaPad Slim 5 |
+| Ryzen AI 5 330 | 4C/8T | 4.5 GHz | Radeon 820M (2CU) | 50 | 15–28W | — |
 
-PRO版: Ryzen AI 7 PRO 350、Ryzen AI 5 PRO 340（法人向け）。
+PRO版: Ryzen AI 9 HX PRO 375、Ryzen AI 7 PRO 360（Strix Point, 8C/16T, 880M 12CU — 消費者版なし）、Ryzen AI 7 PRO 350、Ryzen AI 5 PRO 340（法人向け）。
 
 #### XDNA 2 — Ryzen AI Maxシリーズ（2025年）
 
